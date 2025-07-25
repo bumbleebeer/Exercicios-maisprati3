@@ -2,7 +2,11 @@
 
 Lista de exercícios do módulo 2 do curso +Prati onde abordamos a linguagem de marcação de texto HTML e estilizações com o CSS
 
-
+Para acessar o projeto use:
+```bash
+  git clone https://github.com/bumbleebeer/Exercicios-maisprati3
+```
+Selecione com o botão direito um dos arquivos .html, se tiver a extenção Live Server selecione a opção Show Preview, caso contrário vá na pasta clonada e execute o arquivo que irá abrir o navegador
 
 
 # 🛠️ Tecnologias Utilizadas
