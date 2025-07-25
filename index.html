@@ -11,8 +11,17 @@
 </head>
 <body>
     <header id="links" class="linkCabecalho">
+        <button
+            id="navToggle"
+            class="nav-toggle"
+            aria-controls="navMenu"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+            >
+            &#9776;
+        </button>
         <div>
-            <nav>
+            <nav  id="navMenu">
                 <ul>
                     <li><a href="feedback.html">Feedback</a></li>
                     <li><a href="listas.html">Lista</a></li>
@@ -20,12 +29,12 @@
                 </ul>
             </nav>
         </div>
+    </header>
         <div id="index" class="indexContainer">
             <h2>Bem vindo ao meu Hello World</h2>
             <p>Meu mundo de desenvolvimento para tornar seu dia melhor e mais prático.</p>
         </div>
-    </header>
-    <main>
+    <main id="indexMain">
         <section id="missao" class="indexContainer">
             <h3 class="destaque">Missão</h3>
             <p>Planejo desenvolver soluções criativas e úteis ao mundo real.</p>
@@ -37,8 +46,9 @@
         </section>
     </main>
 
-    <footer id="footerIndex">
+    <footer>
         <p>&copy; 2025 Felipe de Azeredo. Todos os direitos reservados.</p>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>

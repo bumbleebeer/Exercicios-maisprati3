@@ -10,7 +10,28 @@
     <title>Feedback</title>
 </head>
 <body>
-    <main>
+    <header>
+        <button
+            id="navToggle"
+            class="nav-toggle"
+            aria-controls="navMenu"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+            >
+            &#9776;
+        </button>
+        <div>
+            <nav  id="navMenu">
+                <ul>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="listas.html">Lista</a></li>
+                    <li><a href="index.html">Index</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+    </header>
+    <main id="feedbackMain">
         <section id="feedback" class="formsContainer">
             <h2>Deixe seu Feedback</h2>
             <form id="forsmFeedback">
@@ -43,8 +64,9 @@
             </form>
         </section>
     </main>
-    <footer id="footerIndex">
+    <footer>
         <p>&copy; 2025 Felipe de Azeredo. Todos os direitos reservados.</p>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>

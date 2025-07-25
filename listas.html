@@ -11,8 +11,28 @@
     <title>Lista-Links</title>
 </head>
 <body>
+    <header>
+        <button
+            id="navToggle"
+            class="nav-toggle"
+            aria-controls="navMenu"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+            >
+            &#9776;
+        </button>
+        <div>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="index.html">Index</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <main>
+    <main id="listasMain">
         <section id="hobbies" class="listaContainer">
             <h2>Meus Hobbies</h2>
             <ul>
@@ -47,8 +67,9 @@
             </nav>
         </section>
     </main>
-    <footer id="footerIndex">
+    <footer>
         <p>&copy; 2025 Felipe de Azeredo. Todos os direitos reservados.</p>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>

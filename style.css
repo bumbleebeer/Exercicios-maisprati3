@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .varela-round-regular {
@@ -26,23 +26,77 @@ header,
 main {
     margin: 1rem auto;
     padding: 1rem 2rem;
-    max-width: 500px;
     border-radius: 20px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
+
+
 
 h2 {
     font-size: 2rem;
     text-decoration: underline;
 }
 
+#listasMain,
+#indexMain,
+#feedbackMain {
+    max-width: 600px;
+}
+
+#index {
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
 footer {
   width: 100%;
   text-align: center;
   color: rgb(178, 180, 189);
-  padding: 1rem 0;
+  padding: 1rem ;
   margin-top: auto;
+  border-radius: 9px;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+  
 }
+
+.nav-toggle {
+    display: none;
+}
+
+#navMenu {
+  display: flex;
+  justify-content: center;      /* Centraliza horizontalmente */
+  align-items: center;
+}
+
+#navMenu ul {
+  display: flex;                /* Coloca os itens em linha */
+  list-style: none;            /* Remove os pontinhos (bullets) */
+  padding: 0;
+  margin: 0;
+  gap: 2rem;                    /* Espaço entre os links */
+}
+
+#navMenu ul li a {
+  color: white;                /* Muda cor dos links pra branco */
+  text-decoration: none;      /* Remove sublinhado */
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+#navMenu ul li a:hover {
+  color: #ffd700;              /* Efeito ao passar o mouse */
+}
+
+#navMenu.open {
+  display: block;
+}
+
+
+
 /* -- ↑↑ ESTRUTURA GERAL ↑↑ -- */
 
 
@@ -175,14 +229,88 @@ button:hover {
 
 /* -- ↑↑ INDEX ↑↑ -- */
 
+
+/* -- ↓↓ GALERIA ↓↓ -- */
+
+.galeriaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 1000px;
+    width: 100%;
+    padding: 1rem;
+}
+
+.fotoGaleria {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fotoGaleria img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.fotoGaleria p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+#galeriaTitulo {
+    text-align: center;
+}
+
+/* -- ↑↑ GALERIA ↑↑ -- */
+
+
+
+/* -- ↓↓ AJUSTES MEDIA QUERY ↓↓ -- */
+
 @media (max-width: 430px) {
     body {
-        margin: 0;               /* Remove a margem padrão */
-        padding: 15px;           /* Adiciona espaço interno nas bordas */
-        box-sizing: border-box; /* Garante que padding não afete largura total */
+        margin: 0;
+        padding: 1rem;
+        box-sizing: border-box;
     }
     footer {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 }
 
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+    body {
+        margin: 0;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+  
+}
+
+@media (max-width: 600px) {
+    .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+  }
+  #navMenu {
+    display: none;
+  }
+}
+
+/* -- ↑↑ AJUSTES MEDIA QUERY ↑↑ -- */
